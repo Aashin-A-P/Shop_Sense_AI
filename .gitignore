@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+
+# Streamlit and editor settings
+.streamlit/secrets.toml
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
