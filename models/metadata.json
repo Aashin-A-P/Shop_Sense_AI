@@ -1,0 +1,125 @@
+{
+  "project": "ShopSense AI",
+  "created_at_utc": "2026-10-28T17:06:07.142525+00:00",
+  "dataset": {
+    "name": "Online Shoppers Purchasing Intention Dataset",
+    "file": "online_shoppers_intention.csv",
+    "records": 12330,
+    "input_features": 17,
+    "target": "Revenue",
+    "missing_values": 0,
+    "duplicate_rows_retained": 125
+  },
+  "training_samples": 9864,
+  "testing_samples": 2466,
+  "class_distribution": {
+    "full": {
+      "0": 10422,
+      "1": 1908
+    },
+    "training": {
+      "0": 8338,
+      "1": 1526
+    },
+    "testing": {
+      "0": 2084,
+      "1": 382
+    }
+  },
+  "feature_names": [
+    "Administrative",
+    "Administrative_Duration",
+    "Informational",
+    "Informational_Duration",
+    "ProductRelated",
+    "ProductRelated_Duration",
+    "BounceRates",
+    "ExitRates",
+    "PageValues",
+    "SpecialDay",
+    "Month",
+    "OperatingSystems",
+    "Browser",
+    "Region",
+    "TrafficType",
+    "VisitorType",
+    "Weekend"
+  ],
+  "evaluation_metrics": {
+    "logistic_regression": {
+      "accuracy": 0.8414436334144363,
+      "precision": 0.49220103986135183,
+      "recall": 0.743455497382199,
+      "f1_score": 0.5922836287799792,
+      "roc_auc": 0.8931474912321252,
+      "confusion_matrix": [
+        [
+          1791,
+          293
+        ],
+        [
+          98,
+          284
+        ]
+      ]
+    },
+    "knn": {
+      "accuracy": 0.8714517437145174,
+      "precision": 0.6419213973799127,
+      "recall": 0.38481675392670156,
+      "f1_score": 0.48117839607201307,
+      "roc_auc": 0.7572366371556913,
+      "confusion_matrix": [
+        [
+          2002,
+          82
+        ],
+        [
+          235,
+          147
+        ]
+      ]
+    },
+    "decision_tree": {
+      "accuracy": 0.8309002433090025,
+      "precision": 0.47384155455904337,
+      "recall": 0.8298429319371727,
+      "f1_score": 0.6032350142721218,
+      "roc_auc": 0.9032663474389766,
+      "confusion_matrix": [
+        [
+          1732,
+          352
+        ],
+        [
+          65,
+          317
+        ]
+      ]
+    }
+  },
+  "best_model": "decision_tree",
+  "best_model_display_name": "Decision Tree",
+  "selection_metric": "f1_score",
+  "random_state": 42,
+  "test_size": 0.2,
+  "model_configurations": {
+    "logistic_regression": {
+      "max_iter": 1000,
+      "class_weight": "balanced",
+      "random_state": 42
+    },
+    "knn": {
+      "n_neighbors": 5
+    },
+    "decision_tree": {
+      "max_depth": 8,
+      "min_samples_leaf": 10,
+      "class_weight": "balanced",
+      "random_state": 42
+    }
+  },
+  "library_versions": {
+    "scikit_learn": "1.6.1"
+  }
+}
